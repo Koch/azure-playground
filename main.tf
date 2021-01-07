@@ -24,7 +24,7 @@ resource "azurerm_virtual_network" "vnet-management-1" {
   location = azurerm_resource_group.rg-management.location
   resource_group_name = azurerm_resource_group.rg-management.name
 
-  address_space = ["10.1.0.0/8"]
+  address_space = ["10.1.0.0/16"]
 
   subnet {
     name = "vnet-management-1-snet-gw"
@@ -42,7 +42,7 @@ resource "azurerm_virtual_network" "vnet-playground-1" {
   location = azurerm_resource_group.rg-playground.location
   resource_group_name = azurerm_resource_group.rg-playground.name
 
-  address_space = ["10.2.0.0/8"]
+  address_space = ["10.2.0.0/16"]
 
   subnet {
     name = "vnet-std-1-snet-gw"
