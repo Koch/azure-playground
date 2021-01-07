@@ -59,12 +59,12 @@ resource "azurerm_virtual_network_peering" "standard-to-management" {
   name = "standard-to-mgmt-peering"
   resource_group_name = azurerm_resource_group.rg-management.name
   virtual_network_name = azurerm_virtual_network.vnet-playground-1.name
-  remote_virtual_network_id = azurerm_virtual_network.vnet-management-1.name
+  remote_virtual_network_id = azurerm_virtual_network.vnet-management-1.id
 }
 
 resource "azurerm_virtual_network_peering" "management-to-standard" {
   name = "standard-to-mgmt-peering"
   resource_group_name = azurerm_resource_group.rg-management.name
   virtual_network_name = azurerm_virtual_network.vnet-management-1.name
-  remote_virtual_network_id = azurerm_virtual_network.vnet-playground-1.name
+  remote_virtual_network_id = azurerm_virtual_network.vnet-playground-1.id
 }
