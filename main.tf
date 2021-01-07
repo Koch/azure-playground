@@ -33,7 +33,7 @@ resource "azurerm_virtual_network" "vnet-management-1" {
 
   subnet {
     name = "vnet-management-1-snet-servers"
-    address_prefix = "10.1.2.0/20"
+    address_prefix = "10.1.16.0/20"
   }
 }
 
@@ -51,7 +51,7 @@ resource "azurerm_virtual_network" "vnet-playground-1" {
 
   subnet {
     name = "vnet-std-1-snet-servers"
-    address_prefix = "10.2.2.0/20"
+    address_prefix = "10.2.16.0/20"
   }
 }
 
